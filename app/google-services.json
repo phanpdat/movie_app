@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "803388888972",
+    "firebase_url": "https://archery-hero.firebaseio.com",
+    "project_id": "archery-hero",
+    "storage_bucket": "archery-hero.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803388888972:android:c51fe2f1a960d32d76a8a9",
+        "android_client_info": {
+          "package_name": "com.led.keyboard.neon.classic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNsIhQVFPCLJ-yenlPOrFTiOUf2nPy89M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803388888972:android:bb580e9f94190be976a8a9",
+        "android_client_info": {
+          "package_name": "com.peoplefun.wordcross.wordscapes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNsIhQVFPCLJ-yenlPOrFTiOUf2nPy89M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803388888972:android:f471a046adb36b8476a8a9",
+        "android_client_info": {
+          "package_name": "com.led.keyboard.neon.classic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNsIhQVFPCLJ-yenlPOrFTiOUf2nPy89M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803388888972-to8er654cla969sgcoh0haim718i1j2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3909992975808245~2976399586"
+    }
+  ],
+  "configuration_version": "1"
+}

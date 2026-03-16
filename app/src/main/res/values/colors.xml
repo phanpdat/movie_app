@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- StreamX Premium Dark Theme Palette -->
+    <color name="black_deep">#060606</color>
+    <color name="black_card">#121212</color>
+    <color name="red_accent">#E50914</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_text">#9E9E9E</color>
+    <color name="grey_button">#333333</color>
+    <color name="rating_yellow">#FFC107</color>
+    
+    <!-- Subscription UI Colors -->
+    <color name="glass_bg">#222222</color>
+    <color name="glass_border">#222222</color>
+    <color name="premium_button_red">#FF1744</color>
+    <color name="premium_plan_selected_border">#FF1744</color>
+    <color name="premium_plan_selected_bg">#222222</color>
+    <color name="text_secondary">#BDBDBD</color>
+</resources>

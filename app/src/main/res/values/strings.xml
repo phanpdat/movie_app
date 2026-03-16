@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StreamX</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Browse</string>
+    <string name="title_watchlist">Watchlist</string>
+    <string name="featured_label">FEATURED</string>
+    <string name="play_now">Play Now</string>
+    <string name="add_to_list">Add</string>
+    <string name="see_all">See All</string>
+    <string name="retry">Retry</string>
+    <string name="no_movies_found">No movies found</string>
+    <string name="overview_label">Overview</string>
+    <string name="top_cast">Top Cast</string>
+    <string name="production_companies">Production Companies</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="btn_play_now">Play Now</string>
+    <string name="feature_des">A journey beyond the stars to save...</string>
+    <string name="feature_title">Interstellar</string>
+    <string name="feature_text">FEATURED</string>
+    <string name="genre_text">Genre</string>
+</resources>
