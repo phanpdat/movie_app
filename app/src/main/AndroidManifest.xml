@@ -17,19 +17,19 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="${ADMOB_APP_ID}" />
+            android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <meta-data
             android:name="interstitial_id"
-            android:value="${ADMOB_INTERSTITIAL_ID}" />
+            android:value="ca-app-pub-3940256099942544/1033173712" />
 
         <meta-data
             android:name="native_ad_id"
-            android:value="${ADMOB_NATIVE_ID}" />
+            android:value="ca-app-pub-3940256099942544/2247696110" />
 
         <meta-data
             android:name="rewarded_ad_id"
-            android:value="${ADMOB_REWARDED_ID}" />
+            android:value="ca-app-pub-3940256099942544/5224354917" />
 
         <activity
             android:name=".MainActivity"

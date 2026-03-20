@@ -19,6 +19,7 @@ import com.example.movie_app.util.Constants
 import com.example.movie_app.util.Resource
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
+import com.example.movie_app.util.showPremiumDialog
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -116,34 +117,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun showPremiumDialog(onUnlocked: () -> Unit) {
-        val dialog = android.app.Dialog(requireContext())
-        dialog.setContentView(R.layout.dialog_unlock_premium)
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-        dialog.window?.setLayout(
-            android.view.ViewGroup.LayoutParams.MATCH_PARENT,
-            android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-
-        val btnWatchAds = dialog.findViewById<View>(R.id.btnWatchAds)
-        val btnUpgrade = dialog.findViewById<View>(R.id.btnUpgrade)
-        val ivClose = dialog.findViewById<View>(R.id.ivClose)
-
-        ivClose.setOnClickListener { dialog.dismiss() }
-        btnUpgrade.setOnClickListener {
-            dialog.dismiss()
-            findNavController().navigate(R.id.action_homeFragment_to_subscriptionFragment)
-        }
-
-        btnWatchAds.setOnClickListener {
-            dialog.dismiss()
-            com.example.movie_app.ads.AdManager.showRewardedAd(requireActivity()) {
-                onUnlocked()
-            }
-        }
-
-        dialog.show()
-    }
 
     private fun observeData() {
         // Genres

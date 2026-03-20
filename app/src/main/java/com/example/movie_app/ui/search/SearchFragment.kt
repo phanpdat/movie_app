@@ -21,6 +21,7 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import com.example.movie_app.util.showPremiumDialog
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
@@ -47,12 +48,23 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private fun setupRecyclerView() {
         searchAdapter = MovieGridAdapter { movie ->
-            val bundle = Bundle().apply { putInt("movieId", movie.id) }
-            findNavController().navigate(R.id.action_searchFragment_to_movieDetailFragment, bundle)
+            navigateToDetail(movie.id)
         }
         binding.rvSearch.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = searchAdapter
+        }
+    }
+
+    private fun navigateToDetail(movieId: Int) {
+        if (com.example.movie_app.ads.AdManager.isUnlocked()) {
+            val bundle = Bundle().apply { putInt("movieId", movieId) }
+            findNavController().navigate(R.id.action_searchFragment_to_movieDetailFragment, bundle)
+        } else {
+            showPremiumDialog {
+                val bundle = Bundle().apply { putInt("movieId", movieId) }
+                findNavController().navigate(R.id.action_searchFragment_to_movieDetailFragment, bundle)
+            }
         }
     }
 

@@ -20,4 +20,12 @@
     <string name="feature_title">Interstellar</string>
     <string name="feature_text">FEATURED</string>
     <string name="genre_text">Genre</string>
+    <string name="logo_text">ACTIONSTREAM</string>
+    <string name="subscripton_primary_text">GET FULL\nACCESS</string>
+    <string name="subscription_secondary_text">4K ULTRA HD • OFFLINE VIEWING • AD-FREE</string>
+    <string name="premium_text">Premium</string>
+    <string name="basic_sub">Basic</string>
+    <string name="monthly_sub">Monthly subscription</string>
+    <string name="best_value_text">SAVE 40% - BEST VALUE</string>
+    <string name="premium_sub_title_text">Yearly, cancel anytime</string>
 </resources>

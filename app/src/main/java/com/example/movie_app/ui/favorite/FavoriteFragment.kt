@@ -13,6 +13,7 @@ import com.example.movie_app.data.local.MovieDatabase
 import com.example.movie_app.data.repository.MovieRepository
 import com.example.movie_app.databinding.FragmentFavoriteBinding
 import kotlinx.coroutines.launch
+import com.example.movie_app.util.showPremiumDialog
 
 class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
@@ -37,12 +38,23 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
     private fun setupRecyclerView() {
         adapter = FavoriteAdapter { movie ->
-            val bundle = Bundle().apply { putInt("movieId", movie.id) }
-            findNavController().navigate(R.id.action_favoriteFragment_to_movieDetailFragment, bundle)
+            navigateToDetail(movie.id)
         }
         binding.rvFavorites.apply {
             layoutManager = GridLayoutManager(context, 2)
             adapter = this@FavoriteFragment.adapter
+        }
+    }
+
+    private fun navigateToDetail(movieId: Int) {
+        if (com.example.movie_app.ads.AdManager.isUnlocked()) {
+            val bundle = Bundle().apply { putInt("movieId", movieId) }
+            findNavController().navigate(R.id.action_favoriteFragment_to_movieDetailFragment, bundle)
+        } else {
+            showPremiumDialog {
+                val bundle = Bundle().apply { putInt("movieId", movieId) }
+                findNavController().navigate(R.id.action_favoriteFragment_to_movieDetailFragment, bundle)
+            }
         }
     }
 

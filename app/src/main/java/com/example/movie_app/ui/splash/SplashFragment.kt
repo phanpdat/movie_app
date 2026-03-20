@@ -16,11 +16,8 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        // API Test and Navigation Delay
         viewLifecycleOwner.lifecycleScope.launch {
             try {
-                // Test the API explicitly as per Day 1 plan
                 val response = RetrofitClient.api.getPopularMovies(BuildConfig.TMDB_API_KEY)
                 Log.d("API_TEST", "=================================")
                 Log.d("API_TEST", "API Test Successful!")
@@ -33,11 +30,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
                     android.widget.Toast.makeText(context, "Network Error: Please check your internet connection", android.widget.Toast.LENGTH_LONG).show()
                 }
             }
-
-            // Wait 2.5 seconds to show splash screen before going to home
-            delay(5000)
-            
-            // Navigate to home logic here
+            delay(5000)           
             findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
         }
     }

@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
 }
 
 android {
@@ -15,19 +14,17 @@ android {
         applicationId = "com.led.keyboard.neon.classic"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         val properties = Properties()
-        properties.load(project.rootProject.file("local.properties").inputStream())
+        val localPropertiesFile = project.rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            properties.load(localPropertiesFile.inputStream())
+        }
         buildConfigField("String", "TMDB_API_KEY", "\"${properties.getProperty("TMDB_API_KEY") ?: ""}\"")
-
-        manifestPlaceholders["ADMOB_APP_ID"] = properties.getProperty("ADMOB_APP_ID") ?: ""
-        manifestPlaceholders["ADMOB_REWARDED_ID"] = properties.getProperty("ADMOB_REWARDED_ID") ?: ""
-        manifestPlaceholders["ADMOB_INTERSTITIAL_ID"] = properties.getProperty("ADMOB_INTERSTITIAL_ID") ?: ""
-        manifestPlaceholders["ADMOB_NATIVE_ID"] = properties.getProperty("ADMOB_NATIVE_ID") ?: ""
     }
 
     buildTypes {
