@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/black_deep">
 
-    <!-- Background -->
     <ImageView
         android:id="@+id/ivBackground"
         android:layout_width="match_parent"
@@ -45,7 +44,6 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_end="24dp" />
 
-            <!-- Top Header -->
             <TextView
                 android:id="@+id/tvLogo"
                 android:layout_width="162dp"
@@ -69,7 +67,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/white" />
 
-            <!-- Main Content Container (This helps in centering) -->
             <LinearLayout
                 android:id="@+id/contentContainer"
                 android:layout_width="0dp"
@@ -88,7 +85,6 @@
                     android:layout_height="80dp"
                     android:src="@drawable/app_icon"
                     android:layout_marginBottom="30dp"/>
-                <!-- Titles -->
                 <TextView
                     android:id="@+id/tvMainTitle"
                     android:layout_width="wrap_content"
@@ -111,7 +107,6 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <!-- Plans List -->
                 <LinearLayout
                     android:id="@+id/llPlans"
                     android:layout_width="match_parent"
@@ -121,7 +116,6 @@
                     android:clipToPadding="false"
                     android:orientation="vertical">
 
-                    <!-- Plan Basic -->
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/planBasic"
                         android:layout_width="match_parent"
@@ -179,7 +173,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <!-- Plan Premium -->
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -258,7 +251,6 @@
                             android:textStyle="bold" />
                     </FrameLayout>
 
-                    <!-- Plan Ultimate -->
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/planUltimate"
                         android:layout_width="match_parent"
@@ -318,7 +310,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bottom Section -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnStartAction"
                 android:layout_width="0dp"

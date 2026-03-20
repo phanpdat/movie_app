@@ -66,7 +66,6 @@ class SubscriptionFragment : Fragment(R.layout.fragment_subscription) {
     }
 
     private fun observeViewModel() {
-        // Observe prices
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.getProductPrice(Constants.PRODUCT_WEEKLY).collect { price ->
                 binding.tvBasicPrice.text = price ?: "..."
@@ -83,7 +82,6 @@ class SubscriptionFragment : Fragment(R.layout.fragment_subscription) {
             }
         }
 
-        // Observe purchase status
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.purchaseState.collect { state ->
                 when (state) {

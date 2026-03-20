@@ -10,8 +10,6 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class FavoriteViewModel(private val repository: MovieRepository) : ViewModel() {
-
-    // Get favorites from Room as Flow and convert it to StateFlow
     val favoriteMovies: StateFlow<List<FavoriteMovie>> = repository.getAllFavorites()
         .stateIn(
             scope = viewModelScope,
