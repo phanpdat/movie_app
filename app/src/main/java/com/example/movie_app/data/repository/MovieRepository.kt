@@ -9,7 +9,6 @@ class MovieRepository(
     private val api: MovieApi,
     private val favoriteDao: FavoriteDao
 ) {
-    // API calls
     suspend fun getPopularMovies(page: Int = 1) = api.getPopularMovies(BuildConfig.TMDB_API_KEY, page)
     suspend fun getNowPlayingMovies(page: Int = 1) = api.getNowPlayingMovies(BuildConfig.TMDB_API_KEY, page)
     suspend fun getUpcomingMovies(page: Int = 1) = api.getUpcomingMovies(BuildConfig.TMDB_API_KEY, page)

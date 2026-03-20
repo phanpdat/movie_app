@@ -1,4 +1,5 @@
 package com.example.movie_app.ui.home
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ class GenreAdapter(
 
     private var genres = listOf<Genre>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun submitList(newGenres: List<Genre>) {
         genres = newGenres
         notifyDataSetChanged()

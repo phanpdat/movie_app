@@ -1,6 +1,7 @@
 package com.example.movie_app.ui.favorite
 
 import android.R.drawable.ic_menu_report_image
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -27,6 +28,7 @@ class FavoriteAdapter(
     }
 
     inner class FavoriteViewHolder(private val binding: ItemMovieGridBinding) : RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("DefaultLocale")
         fun bind(movie: FavoriteMovie) {
             binding.tvTitle.text = movie.title
             binding.tvRating.text = String.format("%.1f", movie.voteAverage)
